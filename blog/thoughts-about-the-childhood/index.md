@@ -1,4 +1,8 @@
-# Thoughts about the childhood
+---
+title: Thoughts about the childhood
+date: June 20, 2020
+description: Some of my recent thoughts.
+---
 
 I write this post to emphasize one thing I which I knew and integrated: humans are messy and flawed.
 

@@ -1,4 +1,8 @@
-# How to render different components based on screen size
+---
+title: How to render different components based on screen size
+date: June 29, 2020
+description: Going through a litte JS API I've recently discovered.
+---
 
 ## Introduction
 

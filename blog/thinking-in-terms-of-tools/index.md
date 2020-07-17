@@ -1,4 +1,8 @@
-# Thinking in terms of tools
+---
+title: Thinking in terms of tools
+date: June 27, 2020
+description: A way for modeling the world in the purpose of efficiency.
+---
 
 ## Introduction
 

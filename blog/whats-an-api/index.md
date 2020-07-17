@@ -1,6 +1,11 @@
+---
+title: What's an API ?
+date: June 14, 2020
+description: Visualizing the concept of API and going through some examples.
+---
+
 <link rel="stylesheet" type="text/css" media="all" href="./style.css" />
 
-# What's an API ?
 
 ## Introduction
 

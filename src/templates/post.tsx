@@ -6,9 +6,8 @@ import SEO from "../components/shared/seo"
 type DataProps = {
   site: { siteMetadata: { title: string; } };
   markdownRemark: {
-    id: string;
-    excerpt: string;
     html: string;
+    tableOfContents: string;
     frontmatter: {
       title: string;
       date: string;
@@ -25,7 +24,7 @@ const Post: React.FC<PageProps<DataProps>> = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        description={post.frontmatter.description}
       />
 
     </Layout>
@@ -47,7 +46,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date
         description
       }
     }

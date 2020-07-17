@@ -1,4 +1,8 @@
-# A hook for data fetching in React
+---
+title: A hook for data fetching in React
+date: July 13, 2020
+description: Discovering React custom hooks through the process of implementing one for data fetching.
+---
 
 ## Introduction
 
