@@ -1,0 +1,19 @@
+SOURCES:
+https://en.wikipedia.org/wiki/Application_programming_interface
+https://fr.wikipedia.org/wiki/Interface_de_programmation
+https://www.youtube.com/watch?v=s7wmiS2mSXY
+https://developer.mozilla.org/en-US/docs/Glossary/API
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction
+
+GOING FURTHER:
+REST: https://en.wikipedia.org/wiki/Representational_state_transfer
+software architecture: https://en.wikipedia.org/wiki/Software_architecture
+Abstraction: https://en.wikipedia.org/wiki/Abstraction_(computer_science)
+designing APIs: https://www.youtube.com/watch?v=_YlYuNMTCc8
+
+NOTES:
+
+FINITIONS:
+optimize imgs
+
+

@@ -1,0 +1,127 @@
+# Thinking in terms of tools
+
+## Introduction
+
+As an avid learner and researcher to make the world a better place, I ended up (so far) with a general approach for conceptualizing in a "useful" way.
+
+I refer to this approach as:
+> Thinking in terms of tools
+
+In this article, I want to share what I mean by that and what advantages/disadvantages it brings for me.
+
+## Explanation
+
+Things I class as tools:
+- Conventional: a screwdriver, a monkey wrench, all that stuff...
+- More complex but still conventional: a computer, a smartphone, an application...
+- Less conventional: the mind, a habit, a principle...
+
+### Advantages
+
+The advantage of thinking in terms of tools is that it makes you consider a thing (may be a physical or a conceptual one) in regards to what it can do, what it can't, its advantages and disadvantages.
+
+In fact, evaluating advantages and disadvantages implies to have a goal in mind.
+
+That's what makes this approach interesting.
+
+When you use a saw, I assume it's for cutting some kind of material.
+
+And because without a saw it would be far more tedious, you decide to use that tool.
+
+It saves time and energy.
+
+In that example, the kind of goal you try to achieve when using a saw is pretty clear.
+
+But that's not always the case, especially for things that we don't consider as tools at first sight, like the ones I listed in the "Less conventional" section.
+
+And that's where the approach shines, because it questions you about what drives you when you're unaware of it.
+
+### Thinking in terms of tools for habits
+
+Let's take the example of an habit. If you start considering habits as tools, your inner dialog must look like this:
+> Ok. What do I want to do/become/achieve with that habit ?
+>
+> Well, I want this and that...
+>
+> (First benefit: Your goal is now clear. You're no longer ignoring what drives you.)
+>
+> Is that habit useful for getting what I want ?
+>
+> Humm... I like that aspect of the habit but this other aspect is clearly inefficient.
+> I could do this and that to get what I want more quickly...
+>
+> (Second benefit: You become conscious about how the habit influence your life and evaluate its advantages/disadvantages regarding what you want.)
+>
+> Should I keep this habit ? If no, what do I do to loose it ? If yes, can I tweak it a little bit to make it even better ?
+>
+> (Third benefit: You plan to act in a better way.)
+
+Now, and that's the most difficult part, you have to actually do what you planned!
+
+Going further, you certainly will discover that your plan was not that ideal.
+
+So change it! Adapt!
+
+Don't expect your plan to be perfect. You should instead consider it like a rough draft with the sole purpose to make things clearer and guide you at least for the beginning, exactly like in school when you make a draft before actually writing the dissertation.
+
+You wouldn't consider giving your draft to the professor at the end of the test right ?
+
+So why would you consider using your initial plan to face the challenges of life ?
+
+Going back to the benefits of the approach, it prevents, prior to all of that, that you act/think "unconsciously" for important things in your life.
+
+Because your habits, what you think, your principles, your opinions have a real impact on your life and on people around you.
+
+So these are things you must not want chance and determinism decide for you.
+
+### Thinking in terms of tools for the mind
+
+Recently, I applied this approach to thinking.
+
+That is, I try to consider my thoughts as tools helping me understand what I want/don't want, helping me planning/prepare for a plausible future, or at the opposite, reflect on the past, questioning myself...
+
+That has been very beneficial (and there's clearly room for improvements, which is really promising) because it helps me detach from my thoughts. I find it easier to no longer identify to them.
+
+I notice the thought and whatever its content is. Then I just say to myself:
+> Remember, that's merely a thought that comes and goes.
+>
+> Is it useful for you right now ?
+>
+> If yes, cool! Maybe go deeper.
+>
+> If no, there's no need to give it more of your attention.
+>
+> Thoughts are a bit like videos in your Youtube feed. If the video doesn't seem interesting, you just don't watch it and scroll down to the next.
+
+You may be familiar with this way of considering thinking if you're meditating.
+
+And if you're not meditating, please give it a try for at least 1 month.
+
+You may be really surprised (in the good sense).
+
+I think that considering thoughts as tools helps me in my meditation practice but also in life in general.
+
+I feel that I have more perspective on things and thus, I'm less emotionally reactive which helps me act in a more rational way.
+
+For sure there are moments when thinking too much or being too "rational" (with the negative connotation) can be harmful.
+
+For example when it's a question of feelings towards people you love, or when a surprising event directly threats your life and you need to rely on your unconscious brain to react as fast as possible.
+
+### Disadvantages
+
+At the end of the day, we're always conceptualizing with this approach, thus reducing the reality to some of its aspects.
+
+May that way of thinking be too much "goal oriented".
+
+Enjoying life in the present is as/more important than struggling to achieve a specific end goal.
+
+But I would argue that enjoying life is a kind of goal in some sense, but a goal that spans over time.
+
+## Conclusion
+
+I guess that's it for this post.
+
+I hope it made you discover new perspectives of thinking that may help you in your life.
+
+On that, have a good day!
+
