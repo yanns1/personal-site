@@ -14,7 +14,7 @@ const StyledLayout = styled.div`
 
     .avatar {
       border-radius: 50%;
-      transition: all 0.125s ease-out;
+      transition: var(--transition-all);
 
       &:hover, &:focus, &.active {
         outline: none;
@@ -29,8 +29,8 @@ const StyledLayout = styled.div`
 
       & .navlink {
         padding: 0.5rem;
-        border-radius: 0.2rem;
-        transition: all 0.125s ease-out;
+        border-radius: var(--border-radius);
+        transition: var(--transition-all);
 
         &:hover, &.active {
           background-color: var(--primary-dark1-color);
@@ -48,7 +48,7 @@ const StyledLayout = styled.div`
   main {
     flex: 1;
     margin: 2rem var(--page-margin);
-    background-color: red;
+    border: 1px solid black;
   }
 
   footer {

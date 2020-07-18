@@ -63,6 +63,8 @@ const GlobalStyle = createGlobalStyle`
     --smooth-white: #F2F2F2;
     --smooth-dark: #333333;
     --page-margin: 1rem;
+    --border-radius: 4px;
+    --transition-all: all 150ms ease-out;
   }
 
   @media (max-width: 600px) {

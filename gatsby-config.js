@@ -11,11 +11,12 @@ module.exports = {
       resolve: 'gatsby-plugin-svgr',
       options: {
         // any valid svgr options: https://react-svgr.com/docs/options/ (API Override)
-        // titleProp: true,
+        titleProp: true,
         svgoConfig: {
           plugins: [
             {
-              removeViewBox: false
+              removeViewBox: false,
+              removeDimensions: true,
             }
           ]
         }
