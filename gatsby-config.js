@@ -8,16 +8,31 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-svgr',
+      options: {
+        // any valid svgr options: https://react-svgr.com/docs/options/ (API Override)
+        // titleProp: true,
+        svgoConfig: {
+          plugins: [
+            {
+              removeViewBox: false
+            }
+          ]
+        }
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/blog`,
+        path: `${__dirname}/blog/`,
         name: `blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/assets`,
+        path: `${__dirname}/src/assets/`,
         name: `assets`,
       },
     },

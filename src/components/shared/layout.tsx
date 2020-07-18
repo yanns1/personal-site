@@ -1,20 +1,56 @@
 import React from "react"
-import Img from "gatsby-image";
+// components
+import Avatar from "gatsby-image";
 import { Link, useStaticQuery, graphql } from "gatsby"
+import GlobalStyle from "../styled/GlobalStyle";
+import StyledLayout from "../styled/StyledLayout";
+import StyledNav from "../styled/StyledNav";
+import Contacts from "../styled/Contacts";
+// svgs
+// @ts-ignore
+import { ReactComponent as UpworkSvg } from "../../assets/upwork.svg";
+// @ts-ignore
+import { ReactComponent as TwitterSvg } from "../../assets/twitter.svg";
+// @ts-ignore
+import { ReactComponent as GithubSvg } from "../../assets/github.svg";
+// @ts-ignore
+import { ReactComponent as EmailSvg } from "../../assets/email.svg";
 
-type Props = {
-  location: object;
-  title: string;
+type NavProps = {
+  navlinks: {
+    name: string;
+    to: string;
+  }[];
+};
+
+const Nav: React.FC<NavProps> = ({ navlinks }) => {
+  const navlinksJsx = navlinks.map((navlink) =>
+    <Link className="navlink" key={navlink.name} to={navlink.to} activeClassName="active">{navlink.name}</Link>
+  )
+  return (
+    <StyledNav>
+      {navlinksJsx}
+    </StyledNav>
+  );
 }
 
-// TODO
-const Layout: React.FC<Props> = ({ location, title, children }) => {
+type LayoutProps = {
+  location: object;
+}
+
+const navlinks = [
+  { name: "Blog", to: "/blog/" },
+  { name: "Portfolio", to: "/portfolio/" },
+  { name: "More", to: "/more/" },
+]
+
+const Layout: React.FC<LayoutProps> = ({ location, children }) => {
   const data = useStaticQuery(graphql`
     query AvatarQuery {
-      avatar: file(absolutePath: { regex: "/avatar.png/" }) {
+      file(relativePath: {eq: "avatar.png"}) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -22,24 +58,40 @@ const Layout: React.FC<Props> = ({ location, title, children }) => {
   `)
   return (
     <>
-      <header>
-        <Img
-          fixed={data.avatar.childImageSharp.fixed}
-          alt={"Yann Salmon"}
-          style={{
-            marginRight: rhythm(1 / 2),
-            marginBottom: 0,
-            minWidth: 50,
-            borderRadius: `100%`,
-          }}
-          imgStyle={{
-            borderRadius: `50%`,
-          }}
-        />
-      </header>
-      <div>
-        {children}
-      </div>
+      <GlobalStyle></GlobalStyle>
+      <StyledLayout>
+        <header>
+          <Link to="/" className="avatar" activeClassName="active"><Avatar
+            fluid={data.file.childImageSharp.fluid}
+            alt={"Yann Salmon"}
+            style={{
+              width: "3rem",
+              background: "#C4C4C4",
+              borderRadius: "50%",
+            }}
+          /></Link>
+          <Nav navlinks={navlinks} />
+        </header>
+        <main>
+          {children}
+        </main>
+        <footer>
+          <Contacts>
+            <a href="https://www.upwork.com/" target="_blank" rel="noopener" title="Upwork">
+              <UpworkSvg width="2rem" fill="currentColor" />
+            </a>
+            <a href="https://twitter.com/YannSalmon1" target="_blank" rel="noopener" title="My Twitter account">
+              <TwitterSvg width="2rem" fill="currentColor" />
+            </a>
+            <a href="https://github.com/yanns1/personal-site" target="_blank" rel="noopener" title="Site repo on Github">
+              <GithubSvg width="2rem" fill="currentColor" />
+            </a>
+            <a href="mailto:yannsalmon.pro@gmail.com" target="_blank" rel="noopener" title="Email me">
+              <EmailSvg width="2rem" fill="currentColor" />
+            </a>
+          </Contacts>
+        </footer>
+      </StyledLayout>
     </>
   )
 }

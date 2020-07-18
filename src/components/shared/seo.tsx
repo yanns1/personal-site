@@ -31,7 +31,7 @@ const SEO: React.FC<Props> = ({ description, lang = 'en', meta = [], title }) =>
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${data.title}`}
+      titleTemplate={`${data.title} | %s`}
       meta={[
         {
           name: `description`,

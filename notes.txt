@@ -3,6 +3,6 @@ offline: https://www.gatsbyjs.org/docs/resource-handling-and-service-workers/#of
 manifest
 rss: https://www.gatsbyjs.org/docs/adding-an-rss-feed/
 analytics: ?
-favicon ?
+favicon ? title of the page ?
 
 ca
