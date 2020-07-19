@@ -5,4 +5,4 @@ rss: https://www.gatsbyjs.org/docs/adding-an-rss-feed/
 analytics: ?
 favicon ? title of the page ?
 
-Implement Home page + newsletter ca
+Implement Subscribed page
