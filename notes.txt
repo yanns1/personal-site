@@ -5,4 +5,10 @@ rss: https://www.gatsbyjs.org/docs/adding-an-rss-feed/
 analytics: ?
 favicon ? title of the page ?
 
-Implement Subscribed page
+Implement Porfolio page
+Implement 404 page
+
+Change font-size to 14px on mobile, 18px on desktop, line-height to 1.4rem
+
+IMPROVEMENTS:
+better quality for projects photos + show them on diff tab when clicked (put them in static folder ?)
