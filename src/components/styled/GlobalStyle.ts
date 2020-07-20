@@ -115,5 +115,13 @@ const GlobalStyle = createGlobalStyle`
     color: inherit;
   }
 
+  .self-made-link {
+    color: #2F80ED;
+    transition: var(--transition-all);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
 `
 export default GlobalStyle;

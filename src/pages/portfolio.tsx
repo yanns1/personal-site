@@ -24,7 +24,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   const projectsJsx = projects.map((project) =>
     <StyledProject key={project.title}>
       <h2>{project.title}</h2>
-      <a href={project.link} target="_blank" rel="noopener noreferrer">{project.link}</a>
+      <a className="self-made-link" href={project.link} target="_blank" rel="noopener noreferrer">{project.link}</a>
       <div className="img-wrapper">
         <Img
           fluid={project.fluidImgData}
@@ -67,7 +67,7 @@ type DataProps = {
 const Portfolio: React.FC<PageProps<DataProps>> = ({ data, location }) => {
   const projects = [
     { title: "Deep Work", link: "https://deepwork.netlify.app/", fluidImgData: data.deepworkImg.childImageSharp.fluid },
-    { title: "Random Quotes", link: "https://deepwork.netlify.app/", fluidImgData: data.randomQuotesImg.childImageSharp.fluid },
+    { title: "Random Quotes", link: "https://randomq.netlify.app/", fluidImgData: data.randomQuotesImg.childImageSharp.fluid },
     { title: "Learning Path", link: "https://learningpath.netlify.app/", fluidImgData: data.learningPathImg.childImageSharp.fluid },
   ]
 

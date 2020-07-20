@@ -7,7 +7,7 @@ favicon ? title of the page ?
 
 Implement 404 page
 
-Change font-size to 14px on mobile, 18px on desktop, line-height to 1.4rem
+
 
 IMPROVEMENTS:
 better quality for projects photos + show them on diff tab when clicked (put them in static folder ?)

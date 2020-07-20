@@ -32,7 +32,7 @@ const Home: React.FC<PageProps> = ({ location }) => {
           Here you are at the source of all the tracks I’ve made and will make on the web. Everything related to me should be reachable from here.
       </p>
         <p>
-          Check out my <Link className="link" to="/blog/">Blog</Link>, <Link className="link" to="/portfolio/">Portfolio</Link> or the <Link className="link" to="/more/">More</Link> section to know what I’m up to.
+          Check out my <Link className="self-made-link" to="/blog/">Blog</Link>, <Link className="self-made-link" to="/portfolio/">Portfolio</Link> or the <Link className="self-made-link" to="/more/">More</Link> section to know what I’m up to.
       </p>
         <p>
           In addition, if you’ve read some of my blog posts and enjoy them, you can subscribe to my newsletter:

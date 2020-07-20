@@ -7,13 +7,8 @@ const StyledProject = styled.div`
     margin-bottom: 1rem;
   }
 
-  a {
+  .self-made-link {
     margin-bottom: 1rem;
-    color: #2F80ED;
-    transition: var(--transition-all);
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   .img-wrapper {

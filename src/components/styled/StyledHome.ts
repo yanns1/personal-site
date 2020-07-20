@@ -11,14 +11,6 @@ const StyledHome = styled(StyledContentHeader)`
     }
   }
 
-  .link {
-    color: #2F80ED;
-    transition: var(--transition-all);
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
   .newsletter-wrapper {
     margin: 0 15%;
   }
