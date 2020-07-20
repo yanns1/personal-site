@@ -78,16 +78,16 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
         <footer>
           <Contacts>
             <a href="https://www.upwork.com/" target="_blank" rel="noopener" title="Upwork">
-              <UpworkSvg width="2rem" fill="currentColor" />
+              <UpworkSvg width="1.7rem" fill="currentColor" />
             </a>
             <a href="https://twitter.com/YannSalmon1" target="_blank" rel="noopener" title="My Twitter account">
-              <TwitterSvg width="2rem" fill="currentColor" />
+              <TwitterSvg width="1.7rem" fill="currentColor" />
             </a>
             <a href="https://github.com/yanns1/personal-site" target="_blank" rel="noopener" title="Site repo on Github">
-              <GithubSvg width="2rem" fill="currentColor" />
+              <GithubSvg width="1.7rem" fill="currentColor" />
             </a>
             <a href="mailto:yannsalmon.pro@gmail.com" target="_blank" rel="noopener" title="Email me">
-              <EmailSvg width="2rem" fill="currentColor" />
+              <EmailSvg width="1.7rem" fill="currentColor" />
             </a>
           </Contacts>
         </footer>

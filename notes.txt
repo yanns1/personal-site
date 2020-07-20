@@ -5,7 +5,7 @@ rss: https://www.gatsbyjs.org/docs/adding-an-rss-feed/
 analytics: ?
 favicon ? title of the page ?
 
-Implement 404 page
+
 
 
 
