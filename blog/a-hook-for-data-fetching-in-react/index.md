@@ -2,6 +2,7 @@
 title: A hook for data fetching in React
 date: July 13, 2020
 description: Discovering React custom hooks through the process of implementing one for data fetching.
+tag: React
 ---
 
 ## Introduction
@@ -26,7 +27,7 @@ By the end of that tutorial, we'll have something that looks like this:
 
 Let's quickly setup our app and the JSX it will render.
 
-Don't bother too much about it, that's not the interesting part. I just put it here to  give context:
+Don't bother too much about it, that's not the interesting part. I just put it here to give context:
 
 ```js
 // ...imports
@@ -237,7 +238,7 @@ export default function App() {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const pokeData = await fetch(baseUrl + endPoint)
+        const pokeData = await fetch(baseUrl + endPoint);
         if (!didCancel) {
           setData(pokeData);
           setIsLoading(false);
@@ -248,14 +249,14 @@ export default function App() {
           setIsLoading(false);
         }
       }
-    }
+    };
 
     fetchData();
 
     return () => {
       didCancel = true;
-    }
-  }, [endPoint])
+    };
+  }, [endPoint]);
 
   // ...
 }
@@ -276,29 +277,29 @@ So let's implement that with `useReducer`:
 
 function fetchReducer(state, action) {
   switch (action.type) {
-    case 'FETCH_INIT':
+    case "FETCH_INIT":
       return {
         isLoading: true,
-        err: null
+        err: null,
       };
-    case 'FETCH_SUCCESS':
+    case "FETCH_SUCCESS":
       return {
         isLoading: false,
-        err: null
+        err: null,
       };
-    case 'FETCH_FAILURE':
+    case "FETCH_FAILURE":
       return {
         isLoading: false,
-        err: action.payload.err
+        err: action.payload.err,
       };
     default:
-      throw new Error('Unexpected action type');
+      throw new Error("Unexpected action type");
   }
 }
 
 const initialState = {
   isLoading: false,
-  err: null
+  err: null,
 };
 
 export default function App() {
@@ -310,16 +311,16 @@ export default function App() {
 
     async function fetchData() {
       try {
-        dispatch({ type: 'FETCH_INIT' });
+        dispatch({ type: "FETCH_INIT" });
         const res = await fetch(url);
         const data = await res.json();
         if (!didCancel) {
           setData(data);
-          dispatch({ type: 'FETCH_SUCCESS' });
+          dispatch({ type: "FETCH_SUCCESS" });
         }
       } catch (err) {
         if (!didCancel) {
-          dispatch({ type: 'FETCH_FAILURE', payload: { err } });
+          dispatch({ type: "FETCH_FAILURE", payload: { err } });
         }
       }
     }
@@ -328,8 +329,8 @@ export default function App() {
 
     return () => {
       didCancel = true;
-    }
-  }, [endPoint])
+    };
+  }, [endPoint]);
 
   // ...
 }
@@ -357,33 +358,33 @@ Here's the full code:
 
 ```js
 // useFetch.js
-import { useState, useEffect, useReducer } from 'react';
+import { useState, useEffect, useReducer } from "react";
 
 function fetchReducer(state, action) {
   switch (action.type) {
-    case 'FETCH_INIT':
+    case "FETCH_INIT":
       return {
         isLoading: true,
-        err: null
+        err: null,
       };
-    case 'FETCH_SUCCESS':
+    case "FETCH_SUCCESS":
       return {
         isLoading: false,
-        err: null
+        err: null,
       };
-    case 'FETCH_FAILURE':
+    case "FETCH_FAILURE":
       return {
         isLoading: false,
-        err: action.payload.err
+        err: action.payload.err,
       };
     default:
-      throw new Error('Unexpected action type');
+      throw new Error("Unexpected action type");
   }
 }
 
 const initialState = {
   isLoading: false,
-  err: null
+  err: null,
 };
 
 function useFetch(url) {
@@ -395,16 +396,16 @@ function useFetch(url) {
 
     async function fetchData() {
       try {
-        dispatch({ type: 'FETCH_INIT' });
+        dispatch({ type: "FETCH_INIT" });
         const res = await fetch(url);
         const data = await res.json();
         if (!didCancel) {
           setData(data);
-          dispatch({ type: 'FETCH_SUCCESS' });
+          dispatch({ type: "FETCH_SUCCESS" });
         }
       } catch (err) {
         if (!didCancel) {
-          dispatch({ type: 'FETCH_FAILURE', payload: { err } });
+          dispatch({ type: "FETCH_FAILURE", payload: { err } });
         }
       }
     }
@@ -426,21 +427,21 @@ export default useFetch;
 
 // App.js
 
-import React, { useState, useRef } from 'react';
-import useFetch from './useFetch.js';
+import React, { useState, useRef } from "react";
+import useFetch from "./useFetch.js";
 
 // Helper to format what's shown
 function formatAbilities(abilities) {
   const abilitiesList = abilities.reduce((acc, abilityObj) => {
     return [...acc, abilityObj.ability.name];
   }, []);
-  return abilitiesList.join(', ');
+  return abilitiesList.join(", ");
 }
 
-const baseUrl = 'https://pokeapi.co/api/v2/pokemon/';
+const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
 
 export default function App() {
-  const [endPoint, setEndPoint] = useState('pikachu');
+  const [endPoint, setEndPoint] = useState("pikachu");
 
   // ============================================
   // Here's where we call useFetch !

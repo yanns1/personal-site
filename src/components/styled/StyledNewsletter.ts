@@ -26,9 +26,9 @@ const StyledNewsletter = styled.div`
 
   form {
     input {
-        /* override default */
-        outline: none;
-        font-size: 1rem;
+      /* override default */
+      outline: none;
+      font-size: 1rem;
       display: block;
       padding: 0.5rem;
       margin-bottom: 1rem;
@@ -41,7 +41,7 @@ const StyledNewsletter = styled.div`
       }
       &:focus {
         box-shadow: 0 0 0 1px var(--smooth-dark);
-      color: var(--smooth-dark);
+        color: var(--smooth-dark);
       }
     }
 
@@ -55,7 +55,7 @@ const StyledNewsletter = styled.div`
         border: none;
         font-size: 1.2rem;
 
-      cursor: pointer;
+        cursor: pointer;
         color: var(--smooth-white);
         background-color: #9b51e0;
         font-weight: bold;

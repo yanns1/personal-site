@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -106,8 +106,10 @@ const GlobalStyle = createGlobalStyle`
     /* (cause problems for headers here) */
     line-height: 1.4;
     font-family: Montserrat, sans-serif;
-    color: ${props => (props.theme === "dark" ? "var(--smooth-white)" : "var(--smooth-dark)")};
-    background-color: ${props => (props.theme === "dark" ? "var(--smooth-dark)" : "var(--smooth-white)")};
+    color: ${(props) =>
+      props.theme === "dark" ? "var(--smooth-white)" : "var(--smooth-dark)"};
+    background-color: ${(props) =>
+      props.theme === "dark" ? "var(--smooth-dark)" : "var(--smooth-white)"};
   }
 
   a {
@@ -123,5 +125,5 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-`
+`;
 export default GlobalStyle;

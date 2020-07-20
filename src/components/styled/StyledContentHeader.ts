@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledContentHeader = styled.div`
-.header {
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -18,7 +18,7 @@ const StyledContentHeader = styled.div`
       transition: var(--transition-all);
       &:hover {
         color: black;
-        background-color: #E0E0E0;
+        background-color: #e0e0e0;
       }
       &:active {
         color: black;
@@ -26,6 +26,6 @@ const StyledContentHeader = styled.div`
       }
     }
   }
-`
+`;
 
 export default StyledContentHeader;

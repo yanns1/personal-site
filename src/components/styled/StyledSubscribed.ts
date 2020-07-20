@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledSubscribed = styled.div`
   h1 {
@@ -10,6 +10,6 @@ const StyledSubscribed = styled.div`
   p {
     margin-bottom: 1rem;
   }
-`
+`;
 
 export default StyledSubscribed;

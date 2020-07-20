@@ -71,7 +71,7 @@ To render a component, we'll use a little helper to inject the html in the navba
 
 ```js
 const setNavInnerHTML = (html) => {
-  const nav = document.querySelector('nav');
+  const nav = document.querySelector("nav");
   nav.innerHTML = html;
 };
 ```
@@ -82,7 +82,7 @@ We are fully equipped to use `Window.matchMedia()`:
 
 ```js
 // I'm borrowing the MDN doc notation here: "mql" stands for "media query list".
-const mql = window.matchMedia('(max-width: 600px)');
+const mql = window.matchMedia("(max-width: 600px)");
 
 let mobileView = mql.matches;
 
@@ -110,7 +110,7 @@ However, this example would only work for the first render.
 If we want to dynamically adjust the layout, we can set an event listener on the media query list returned, of type `change`:
 
 ```js
-mql.addEventListener('change', (e) => {
+mql.addEventListener("change", (e) => {
   const mobileView = e.matches;
   if (mobileView) {
     setNavInnerHTML(Component1);

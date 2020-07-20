@@ -1,15 +1,11 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 // components
 import StyledNewsletter from "../styled/StyledNewsletter";
-import ConvertkitForm from "../styled/ConvertkitForm";
 // svgs
 // @ts-ignore
 import { ReactComponent as NewsletterSvg } from "../../assets/newsletter.svg";
 
-type Props = {};
-
-const Newsletter: React.FC<Props> = ({ }) => {
+const Newsletter: React.FC = () => {
   return (
     <StyledNewsletter>
       <div className="header">
@@ -49,7 +45,6 @@ const Newsletter: React.FC<Props> = ({ }) => {
           required
         />
         <div className="button-wrapper">
-
           <button type="submit">Subscribe</button>
         </div>
       </form>

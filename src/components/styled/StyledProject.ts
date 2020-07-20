@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledProject = styled.div`
   h2 {
@@ -16,6 +16,6 @@ const StyledProject = styled.div`
     justify-content: center;
     align-items: center;
   }
-`
+`;
 
 export default StyledProject;

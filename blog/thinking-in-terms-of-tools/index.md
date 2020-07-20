@@ -9,6 +9,7 @@ description: A way for modeling the world in the purpose of efficiency.
 As an avid learner and researcher to make the world a better place, I ended up (so far) with a general approach for conceptualizing in a "useful" way.
 
 I refer to this approach as:
+
 > Thinking in terms of tools
 
 In this article, I want to share what I mean by that and what advantages/disadvantages it brings for me.
@@ -16,6 +17,7 @@ In this article, I want to share what I mean by that and what advantages/disadva
 ## Explanation
 
 Things I class as tools:
+
 - Conventional: a screwdriver, a monkey wrench, all that stuff...
 - More complex but still conventional: a computer, a smartphone, an application...
 - Less conventional: the mind, a habit, a principle...
@@ -43,6 +45,7 @@ And that's where the approach shines, because it questions you about what drives
 ### Thinking in terms of tools for habits
 
 Let's take the example of an habit. If you start considering habits as tools, your inner dialog must look like this:
+
 > Ok. What do I want to do/become/achieve with that habit ?
 >
 > Well, I want this and that...
@@ -87,6 +90,7 @@ That is, I try to consider my thoughts as tools helping me understand what I wan
 That has been very beneficial (and there's clearly room for improvements, which is really promising) because it helps me detach from my thoughts. I find it easier to no longer identify to them.
 
 I notice the thought and whatever its content is. Then I just say to myself:
+
 > Remember, that's merely a thought that comes and goes.
 >
 > Is it useful for you right now ?
@@ -128,4 +132,3 @@ I guess that's it for this post.
 I hope it made you discover new perspectives of thinking that may help you in your life.
 
 On that, have a good day!
-

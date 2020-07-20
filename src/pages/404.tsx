@@ -1,8 +1,8 @@
-import React from "react"
-import { PageProps, Link } from "gatsby"
+import React from "react";
+import { PageProps, Link } from "gatsby";
 // components
-import Layout from "../components/shared/layout"
-import SEO from "../components/shared/seo"
+import Layout from "../components/shared/layout";
+import SEO from "../components/shared/seo";
 import Styled404 from "../components/styled/Styled404";
 // svgs
 // @ts-ignore
@@ -21,11 +21,15 @@ const NotFoundPage: React.FC<PageProps> = ({ location }) => {
           {/* <LightSvg fill="currentColor" title="Light icon"/> */}
         </div>
         <p>You hit an inexistent route.</p>
-        <p><Link className="self-made-link" to='/'>Go back to the homepage</Link> or use the navigation at the top of the page.</p>
-
+        <p>
+          <Link className="self-made-link" to="/">
+            Go back to the homepage
+          </Link>{" "}
+          or use the navigation at the top of the page.
+        </p>
       </Styled404>
     </Layout>
-  )
-}
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;

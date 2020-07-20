@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const Contacts = styled.div`
   display: grid;
@@ -17,7 +17,6 @@ const Contacts = styled.div`
       color: black;
     }
   }
-
-`
+`;
 
 export default Contacts;

@@ -1,18 +1,27 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
-type MetaObj = { name: string; content: string; property?: undefined; } | { property: string; content: string; name?: undefined; }
+type MetaObj =
+  | { name: string; content: string; property?: undefined }
+  | { property: string; content: string; name?: undefined };
 
 type Props = {
   description: string;
   lang?: string;
   meta?: MetaObj[];
   title: string;
-}
+};
 
-const SEO: React.FC<Props> = ({ description, lang = 'en', meta = [], title }) => {
-  const { site: { siteMetadata: data } } = useStaticQuery(
+const SEO: React.FC<Props> = ({
+  description,
+  lang = "en",
+  meta = [],
+  title,
+}) => {
+  const {
+    site: { siteMetadata: data },
+  } = useStaticQuery(
     graphql`
       query {
         site {
@@ -22,7 +31,7 @@ const SEO: React.FC<Props> = ({ description, lang = 'en', meta = [], title }) =>
         }
       }
     `
-  )
+  );
 
   return (
     // @ts-ignore
@@ -51,7 +60,7 @@ const SEO: React.FC<Props> = ({ description, lang = 'en', meta = [], title }) =>
         },
       ].concat(meta)}
     />
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;

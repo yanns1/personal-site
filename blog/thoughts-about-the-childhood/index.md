@@ -29,9 +29,11 @@ Well, these thoughts come from experience and putting things into perspective.
 But when you're a child (anyway that was my case), you clearly don't have that experience, nor you care.
 
 When adults yell at you:
+
 > Listen to me. I've more experience than you blablabla...
 
 Your child brain thinks:
+
 > What the heck is he talking about ? He's just wrong !
 
 In fact, that's how I wish I thought more often back then. I wish I could be more confident in my ability to reason and keep my position if I had good reasons for.
@@ -61,14 +63,17 @@ And I mean, why now ? That have no sense. I'm at home. I've all my time free bec
 Finally, to end this train of thoughts, I just wanted to tell you, dear reader, that if you're an adult/ a parent/ a future parent, your acts towards children certainly have bigger impacts than you think.
 
 Maybe try to learn to your kids to take things less seriously because, like Heraclitus said:
+
 > The only constant in life is change.
 
 I hope that they can integrate it just by us telling them.
 
 But it may be an unrealistic hope because again, borrowing a quote from a tweet of James Clear:
+
 > History repeats itself because some experiences need to be lived before they can be understood.
 
 The first time I read this quote, I said to myself:
+
 > Oh good ! That's so true !
 
 But at the same time it makes me sad because that means that, in a certain extent, every human being will fail at the same challenges in order to learn, whereas its ancestors have done the same mistakes and came up with (certainly) great solutions.
@@ -85,8 +90,6 @@ Would happiness exist if there was no suffering ?
 
 Probably not.
 
-
 That's where this post ends. I hope some of those words speak to you and trigger some interesting reflections in your mind.
 
 On that, have a good day !
-

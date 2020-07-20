@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledLayout = styled.div`
   min-height: 100vh;
@@ -16,7 +16,9 @@ const StyledLayout = styled.div`
       border-radius: 50%;
       transition: var(--transition-all);
 
-      &:hover, &:focus, &.active {
+      &:hover,
+      &:focus,
+      &.active {
         outline: none;
         box-shadow: 0 0 0 2px var(--primary-dark2-color);
       }
@@ -32,7 +34,8 @@ const StyledLayout = styled.div`
         border-radius: var(--border-radius);
         transition: var(--transition-all);
 
-        &:hover, &.active {
+        &:hover,
+        &.active {
           background-color: var(--primary-dark1-color);
         }
 
@@ -42,7 +45,6 @@ const StyledLayout = styled.div`
         }
       }
     }
-
   }
 
   main {
@@ -58,8 +60,6 @@ const StyledLayout = styled.div`
     justify-content: center;
     align-items: center;
   }
-
-
-`
+`;
 
 export default StyledLayout;

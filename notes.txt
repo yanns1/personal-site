@@ -7,6 +7,7 @@ favicon ? title of the page ?
 
 Implement Blog page
 
+Implement dark theme
 
 
 IMPROVEMENTS:

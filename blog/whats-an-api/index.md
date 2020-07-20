@@ -6,7 +6,6 @@ description: Visualizing the concept of API and going through some examples.
 
 <link rel="stylesheet" type="text/css" media="all" href="./style.css" />
 
-
 ## Introduction
 
 I find that the term "API" is used a LOT by people in the software industry. And frankly, I programmed for 1 year and a half without understanding it. That was really frustrating particularly because it's so much used !
@@ -41,7 +40,6 @@ It's like the Function Machine guy said to you:
 
 You have no idea how this guy makes four cubes out of three spheres, but you don't care ! The only thing important here is to know what that function does (outputs) and what you should provide to make it work (inputs).
 
-
 ## A function API
 
 May a simple code example be more concrete:
@@ -70,7 +68,7 @@ function square(x) {
   return multiply(x, x);
 }
 
-console.log(square(2))
+console.log(square(2));
 // 4
 ```
 
@@ -80,7 +78,7 @@ Ok, you're not dumb... You have certainly guessed that the code inside the funct
 
 ```js
 // ...
-  return x * y;
+return x * y;
 // ...
 ```
 
@@ -105,7 +103,7 @@ const React = {
   useState,
   useReducer,
   // ...
-}
+};
 ```
 
 Let's use one of these: useState.
@@ -115,21 +113,22 @@ According to the [API documentation](https://reactjs.org/docs/hooks-reference.ht
 For example:
 
 ```js
-const output = useState(0)
+const output = useState(0);
 // output: [0, function...]
 ```
 
 We can use a JS feature called "array destructuring" to directly assign the array values returned by `useState` to their respective variables:
 
 ```js
-const [state, setState] = useState(0)
+const [state, setState] = useState(0);
 // state: 0
 // setState: function...
 ```
+
 Now we can use `setState` to update the state as we want:
 
 ```js
-setState(1)
+setState(1);
 // state: 1
 // setState: function...
 ```
@@ -151,7 +150,9 @@ Let's do that:
 ```js
 // assuming we are in a async function
 
-const data = await fetch('https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=439d4b804bc8187953eb36d2a8c26a02').json()
+const data = await fetch(
+  "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=439d4b804bc8187953eb36d2a8c26a02"
+).json();
 // data:
 // {
 //   "coord": {
@@ -190,7 +191,6 @@ At the lowest level of abstraction, there are only 0 and 1s. So programmers have
 
 Today, every program rely on some sort of abstraction and that's why they get increasingly powerful. Because otherwise, one's human brain would not keep up with all the 0 and 1s that the computer consume at the end of the day.
 
-
 ## Conclusion
 
 That's it!
@@ -202,15 +202,15 @@ If you have any comments or suggestion about something, feel free to share it. I
 I'm eager to deepen my understanding around that subject.
 
 ## Sources
+
 - https://fr.wikipedia.org/wiki/Interface_de_programmation
 - https://www.youtube.com/watch?v=s7wmiS2mSXY
 - https://developer.mozilla.org/en-US/docs/Glossary/API
 - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction
 - https://en.wikipedia.org/wiki/Application_programming_interface
 
-
 ## Going further
+
 - software architecture: https://en.wikipedia.org/wiki/Software_architecture
 - abstraction: https://en.wikipedia.org/wiki/Abstraction_(computer_science)
 - designing APIs: https://www.youtube.com/watch?v=_YlYuNMTCc8
-

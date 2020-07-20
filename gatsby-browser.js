@@ -1,3 +1,3 @@
-import "typeface-montserrat"
+import "typeface-montserrat";
 
-import "prismjs/themes/prism.css"
+import "prismjs/themes/prism.css";

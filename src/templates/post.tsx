@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql, PageProps } from "gatsby"
-import Layout from "../components/shared/layout"
-import SEO from "../components/shared/seo"
+import React from "react";
+import { graphql, PageProps } from "gatsby";
+import Layout from "../components/shared/layout";
+import SEO from "../components/shared/seo";
 
 type DataProps = {
-  site: { siteMetadata: { title: string; } };
+  site: { siteMetadata: { title: string } };
   markdownRemark: {
     html: string;
     tableOfContents: string;
@@ -12,13 +12,13 @@ type DataProps = {
       title: string;
       date: string;
       description: string;
-    }
-  }
-}
+    };
+  };
+};
 
 const Post: React.FC<PageProps<DataProps>> = ({ data, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -26,12 +26,11 @@ const Post: React.FC<PageProps<DataProps>> = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description}
       />
-
     </Layout>
-  )
-}
+  );
+};
 
-export default Post
+export default Post;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -51,4 +50,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

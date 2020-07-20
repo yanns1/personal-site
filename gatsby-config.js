@@ -1,14 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Yann Salmon`,
-    author: {
-      name: `Yann Salmon`,
-    },
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    siteUrl: `https://yannsalmon.netlify.app/`,
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-svgr',
+      resolve: "gatsby-plugin-svgr",
       options: {
         // any valid svgr options: https://react-svgr.com/docs/options/ (API Override)
         titleProp: true,
@@ -17,9 +14,9 @@ module.exports = {
             {
               removeViewBox: false,
               removeDimensions: true,
-            }
-          ]
-        }
+            },
+          ],
+        },
       },
     },
     `gatsby-plugin-styled-components`,
@@ -83,4 +80,4 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     // `gatsby-plugin-offline`,
   ],
-}
+};
