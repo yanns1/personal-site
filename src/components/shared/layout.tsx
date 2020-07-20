@@ -77,7 +77,8 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
         </main>
         <footer>
           <Contacts>
-            <a href="https://www.upwork.com/" target="_blank" rel="noopener" title="Upwork">
+            {/* Find link in: Find work => Profile => Profile link on the right */}
+            <a href="https://www.upwork.com/o/profiles/users/~01a97d9c6d2047e133/" target="_blank" rel="noopener" title="Upwork">
               <UpworkSvg width="1.7rem" fill="currentColor" />
             </a>
             <a href="https://twitter.com/YannSalmon1" target="_blank" rel="noopener" title="My Twitter account">
