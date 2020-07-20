@@ -1,11 +1,7 @@
 import styled from 'styled-components';
+import StyledContentHeader from "./StyledContentHeader";
 
-const Styled404 = styled.div`
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
+const Styled404 = styled(StyledContentHeader)`
 `
 
 export default Styled404;
