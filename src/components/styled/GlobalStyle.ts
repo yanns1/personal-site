@@ -69,8 +69,8 @@ const GlobalStyle = createGlobalStyle`
 
   @media (max-width: 600px) {
     :root {
-      font-size: 12px;
-      /* font-size: 14px; */
+      /* font-size: 12px; */
+      font-size: 14px;
     }
   }
 
@@ -95,14 +95,16 @@ const GlobalStyle = createGlobalStyle`
 
   @media (min-width: 1400px) {
     :root {
-      font-size: 20px;
-      /* font-size: 18px; */
+      /* font-size: 20px; */
+      font-size: 18px;
       --page-margin: 20rem;
     }
   }
 
   body {
-    /* line-height: 1.4rem; */
+    /* Don't use units because poor inheritance behavior */
+    /* (cause problems for headers here) */
+    line-height: 1.4;
     font-family: Montserrat, sans-serif;
     color: ${props => (props.theme === "dark" ? "var(--smooth-white)" : "var(--smooth-dark)")};
     background-color: ${props => (props.theme === "dark" ? "var(--smooth-dark)" : "var(--smooth-white)")};

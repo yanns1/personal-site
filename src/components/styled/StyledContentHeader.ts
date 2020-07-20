@@ -4,14 +4,15 @@ const StyledContentHeader = styled.div`
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 2rem;
     & h1 {
       font-size: 2rem;
       font-weight: bold;
     }
-    & .theme-icon-wrapper {
+    & svg {
       cursor: pointer;
+      /* the padding is subtracted from the width of the svg */
       padding: 0.3rem;
       border-radius: var(--border-radius);
       transition: var(--transition-all);

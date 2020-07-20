@@ -19,10 +19,8 @@ const Home: React.FC<PageProps> = ({ location }) => {
       <StyledHome>
         <div className="header">
           <h1>Hey, I'm Yann Salmon</h1>
-          <div className="theme-icon-wrapper">
-            <MoonSvg width="1.5rem" fill="currentColor" title="Moon icon" />
-            {/* <LightSvg fill="currentColor" title="Light icon"/> */}
-          </div>
+          <MoonSvg width="2rem" fill="currentColor" title="Moon icon" />
+          {/* <LightSvg fill="currentColor" title="Light icon"/> */}
         </div>
         <p>
           I’m a french developer living in Nantes and a student in engineering (not yet specialized into IT but that’s the plan !).

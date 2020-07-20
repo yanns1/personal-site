@@ -30,7 +30,8 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
           fluid={project.fluidImgData}
           alt={project.title}
           style={{
-            width: "35%"
+            width: "35%",
+            margin: "1rem 0"
           }}
         />
       </div>
@@ -76,10 +77,8 @@ const Portfolio: React.FC<PageProps<DataProps>> = ({ data, location }) => {
       <StyledPortfolio>
         <div className="header">
           <h1>Portfolio</h1>
-          <div className="theme-icon-wrapper">
-            <MoonSvg width="1.5rem" fill="currentColor" title="Moon icon" />
-            {/* <LightSvg fill="currentColor" title="Light icon"/> */}
-          </div>
+          <MoonSvg width="2rem" fill="currentColor" title="Moon icon" />
+          {/* <LightSvg fill="currentColor" title="Light icon"/> */}
         </div>
         <p>
           I currently have no professional experience but I've built several apps that I use on a daily basis.
