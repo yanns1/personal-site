@@ -1,3 +1,4 @@
+TODOs
 clean package.json
 offline: https://www.gatsbyjs.org/docs/resource-handling-and-service-workers/#offline-plugin-gatsby-plugin-offline
 manifest
@@ -5,10 +6,19 @@ rss: https://www.gatsbyjs.org/docs/adding-an-rss-feed/
 analytics: ?
 favicon ? title of the page ?
 
-Implement Blog page
+Implement post page
 
-Implement dark theme
+Implement dark theme (theme provider from styled comp, see course)
+https://www.youtube.com/watch?v=Fg8TV8Sq4W8&list=PLW0RabRDhwwzVNhlOgQQgw6HJzXdM1MnT&index=24
 
-
+TODO:
+handle cases where title is "", date/desc/timeToRead are null
 IMPROVEMENTS:
 better quality for projects photos + show them on diff tab when clicked (put them in static folder ?)
+
+Progress bar for feedback about where the reader is in the reading of the post
+
+Things that will cause an error in mdx:
+using pre el for something other than code
+warn when use h1
+warn when nothing in toc

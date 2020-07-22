@@ -4,11 +4,12 @@ const StyledContentHeader = styled.div`
   .header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     margin-bottom: 2rem;
     & h1 {
       font-size: 2rem;
       font-weight: bold;
+      max-width: 90%;
     }
     & svg {
       cursor: pointer;

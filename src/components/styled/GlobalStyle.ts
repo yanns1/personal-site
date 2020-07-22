@@ -1,4 +1,9 @@
 import { createGlobalStyle } from "styled-components";
+// fonts
+// @ts-ignore
+import DankMonoRegular from "../../assets/fonts/DankMono-Regular.woff";
+// @ts-ignore
+import DankMonoRegular2 from "../../assets/fonts/DankMono-Regular.woff2";
 
 const GlobalStyle = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -50,6 +55,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   /* ================================================================ */
+  @font-face {
+  font-family: "Dank Mono Regular";
+  src: url(${DankMonoRegular2}) format('woff2'),
+  url(${DankMonoRegular}) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
   *,
   *:before,
   *:after {

@@ -14,6 +14,8 @@ import { ReactComponent as MoonSvg } from "../assets/moon.svg";
 import { ReactComponent as LightSvg } from "../assets/light.svg";
 // @ts-ignore
 import { ReactComponent as SearchSvg } from "../assets/search.svg";
+// helpers
+import { formatDate } from "../utils/helpers";
 
 type PostCardsProps = {
   posts: {
@@ -26,14 +28,16 @@ type PostCardsProps = {
 };
 
 const PostCards: React.FC<PostCardsProps> = ({ posts }) => {
-  const postCardsJsx = posts.map((post) => (
-    <StyledPostCard key={post.title} to={post.slug}>
-      <h2>{post.title}</h2>
-      <div className="date">{post.date}</div>
-      <p className="description">{post.description}</p>
-      {post.tag ? <span className="tag">{post.tag}</span> : null}
-    </StyledPostCard>
-  ));
+  const postCardsJsx = posts.map((post) => {
+    return (
+      <StyledPostCard key={post.title} to={post.slug}>
+        <h2>{post.title}</h2>
+        <div className="date">{formatDate(post.date)}</div>
+        <p className="description">{post.description}</p>
+        {post.tag ? <span className="tag">{post.tag}</span> : null}
+      </StyledPostCard>
+    );
+  });
 
   return <>{postCardsJsx}</>;
 };
@@ -65,7 +69,7 @@ type DataProps = {
       siteUrl: string;
     };
   };
-  allMarkdownRemark: {
+  allMdx: {
     edges: {
       node: {
         frontmatter: {
@@ -103,7 +107,7 @@ const Blog: React.FC<PageProps<DataProps>> = ({ data, location }) => {
   };
 
   const posts = useMemo(() => {
-    return data.allMarkdownRemark.edges
+    return data.allMdx.edges
       .map((nodeObj) => ({
         ...nodeObj.node.frontmatter,
         slug: nodeObj.node.fields.slug,
@@ -120,7 +124,7 @@ const Blog: React.FC<PageProps<DataProps>> = ({ data, location }) => {
   }, [data, searchVal, selectedTags]);
 
   const tags = useMemo(() => {
-    const filteredTags = data.allMarkdownRemark.edges
+    const filteredTags = data.allMdx.edges
       .map((nodeObj) => nodeObj.node.frontmatter.tag)
       .filter((tag) => tag !== null);
 
@@ -184,10 +188,7 @@ export const query = graphql`
         siteUrl
       }
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 1000
-    ) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
       edges {
         node {
           frontmatter {

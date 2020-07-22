@@ -1,3 +1,2 @@
 import "typeface-montserrat";
-
-import "prismjs/themes/prism.css";
+import "typeface-merriweather";
