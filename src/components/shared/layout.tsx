@@ -15,6 +15,8 @@ import { ReactComponent as TwitterSvg } from "../../assets/twitter.svg";
 import { ReactComponent as GithubSvg } from "../../assets/github.svg";
 // @ts-ignore
 import { ReactComponent as EmailSvg } from "../../assets/email.svg";
+// @ts-ignore
+import { ReactComponent as RssSvg } from "../../assets/rss.svg";
 
 type NavProps = {
   navlinks: {
@@ -113,6 +115,9 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
             >
               <EmailSvg width="1.7rem" fill="currentColor" />
             </a>
+            <Link to="/rss.xml" title="RSS Feed">
+              <RssSvg width="1.7rem" fill="currentColor" />
+            </Link>
           </Contacts>
         </footer>
       </StyledLayout>

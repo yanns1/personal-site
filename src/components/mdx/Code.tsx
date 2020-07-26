@@ -17,9 +17,12 @@ const Code: React.FC = ({ children }) => {
   // wich as the code string as children
   // @ts-ignore
   const codeStr = children.props?.children.trim();
-  if (!codeStr) { // pre tag is used but without code in it
-    console.error(`A pre tag is used in the post. Currently, they're intended to be used with a code el in it, so there's no special styling for it.`)
-    return <pre>{children}</pre>
+  if (!codeStr) {
+    // pre tag is used but without code in it
+    console.error(
+      `A pre tag is used in the post. Currently, they're intended to be used with a code el in it, so there's no special styling for it.`
+    );
+    return <pre>{children}</pre>;
   }
   // @ts-ignore
   const language = children.props?.className

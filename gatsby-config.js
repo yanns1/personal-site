@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Yann Salmon`,
+    description: `Yann's personal site`,
     siteUrl: `https://yannsalmon.netlify.app`,
   },
   plugins: [
@@ -70,7 +71,55 @@ module.exports = {
     //     //trackingId: `ADD YOUR TRACKING ID HERE`,
     //   },
     // },
-    // `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map((edge) => ({
+                ...edge.node.frontmatter,
+                url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+              }));
+            },
+            query: `
+              {
+                allMdx(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      frontmatter {
+                        title
+                        description
+                        date
+                      }
+                      fields {
+                        slug
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Yann's personal site RSS Feed",
+          },
+        ],
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {

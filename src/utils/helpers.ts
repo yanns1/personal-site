@@ -34,16 +34,26 @@ type FrontmatterData = {
   title: string;
   date: string | null;
   description: string | null;
-}
+};
 
-export const checkFrontmatterData = ({ title, date, description }: FrontmatterData): void | never => {
+export const checkFrontmatterData = ({
+  title,
+  date,
+  description,
+}: FrontmatterData): void | never => {
   if (title === "") {
-    throw new Error("title is empty. It must have been forgotten in the post frontmatter.")
+    throw new Error(
+      "title is empty. It must have been forgotten in the post frontmatter."
+    );
   }
   if (date === null) {
-    throw new Error("date is null. It must have been forgotten in the post frontmatter.")
+    throw new Error(
+      "date is null. It must have been forgotten in the post frontmatter."
+    );
   }
   if (description === null) {
-    throw new Error("description is null. It must have been forgotten in the post frontmatter.")
+    throw new Error(
+      "description is null. It must have been forgotten in the post frontmatter."
+    );
   }
-}
+};

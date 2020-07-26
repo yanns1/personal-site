@@ -92,8 +92,8 @@ const Blog: React.FC<PageProps<DataProps>> = ({ data, location }) => {
       title: nodeObj.node.frontmatter.title,
       date: nodeObj.node.frontmatter.date,
       description: nodeObj.node.frontmatter.description,
-    })
-  })
+    });
+  });
 
   const [searchVal, setSearchVal] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);

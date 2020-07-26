@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Contacts = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   column-gap: 1rem;
 
   a {

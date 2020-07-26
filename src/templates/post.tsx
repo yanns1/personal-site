@@ -31,7 +31,9 @@ type ToCProps = {
 
 const ToC: React.FC<ToCProps> = ({ toc }) => {
   if (toc.length === 0) {
-    throw new Error("You shouldn't create a table of contents because there's no heading in the post.")
+    throw new Error(
+      "You shouldn't create a table of contents because there's no heading in the post."
+    );
   }
   // use url as key because if there are 2 identical (or more)
   // headings, title will be the same but not the url
@@ -120,13 +122,15 @@ const Post: React.FC<PageProps<DataProps>> = ({ data, location }) => {
 
   // Check data
   if (post.timeToRead === null) {
-    throw new Error("timeToRead is null, which means that there's too little content in the post.")
+    throw new Error(
+      "timeToRead is null, which means that there's too little content in the post."
+    );
   }
   checkFrontmatterData({
     title: post.frontmatter.title,
     date: post.frontmatter.date,
     description: post.frontmatter.description,
-  })
+  });
 
   // dev mode
   const postUrl = "http://localhost:8000" + post.fields.slug;
