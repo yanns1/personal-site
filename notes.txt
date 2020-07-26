@@ -6,15 +6,14 @@ rss: https://www.gatsbyjs.org/docs/adding-an-rss-feed/
 analytics: ?
 favicon ? title of the page ?
 
-Implement post page
 
 Implement dark theme (theme provider from styled comp, see course)
 https://www.youtube.com/watch?v=Fg8TV8Sq4W8&list=PLW0RabRDhwwzVNhlOgQQgw6HJzXdM1MnT&index=24
 
-TODO:
+Adding rss feed
+
 
 IMPROVEMENTS:
 better quality for projects photos + show them on diff tab when clicked (put them in static folder ?)
 
 Progress bar for feedback about where the reader is in the reading of the post
-
