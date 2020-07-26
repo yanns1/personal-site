@@ -50,7 +50,6 @@ const StyledLayout = styled.div`
   main {
     flex: 1;
     margin: 2rem var(--page-margin);
-    border: 1px solid black;
   }
 
   footer {

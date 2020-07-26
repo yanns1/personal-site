@@ -7,6 +7,7 @@ import mdxComponents from "../components/mdx/mdxComponents";
 // components
 import Layout from "../components/shared/layout";
 import SEO from "../components/shared/seo";
+import Newsletter from "../components/shared/newsletter";
 import StyledPost from "../components/styled/StyledPost";
 import StyledToC from "../components/styled/StyledToC";
 import CenteredImg from "../components/mdx/CenteredImg";
@@ -158,6 +159,7 @@ const Post: React.FC<PageProps<DataProps>> = ({ data, location }) => {
         <MDXProvider components={allMdxComp}>
           <MDXRenderer toc={preparedToC}>{post.body}</MDXRenderer>
         </MDXProvider>
+        <Newsletter />
       </StyledPost>
     </Layout>
   );
