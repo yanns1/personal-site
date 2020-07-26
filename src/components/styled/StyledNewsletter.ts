@@ -5,7 +5,9 @@ const StyledNewsletter = styled.div`
   background-color: var(--primary-light-color);
   border-radius: var(--border-radius);
 
-  .header {
+  /* If use "header", there's a conflict with "header" */
+  /* class of the top level page that will override this one */
+  .newsletter-header {
     display: flex;
     justify-content: start;
     align-items: center;

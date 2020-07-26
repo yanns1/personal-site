@@ -8,7 +8,7 @@ import { ReactComponent as NewsletterSvg } from "../../assets/newsletter.svg";
 const Newsletter: React.FC = () => {
   return (
     <StyledNewsletter>
-      <div className="header">
+      <div className="newsletter-header">
         <NewsletterSvg
           width="2rem"
           fill="currentColor"

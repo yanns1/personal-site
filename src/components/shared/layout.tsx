@@ -86,7 +86,7 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
             <a
               href="https://www.upwork.com/o/profiles/users/~01a97d9c6d2047e133/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               title="Upwork"
             >
               <UpworkSvg width="1.7rem" fill="currentColor" />
@@ -94,7 +94,7 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
             <a
               href="https://twitter.com/YannSalmon1"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               title="My Twitter account"
             >
               <TwitterSvg width="1.7rem" fill="currentColor" />
@@ -102,7 +102,7 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
             <a
               href="https://github.com/yanns1/personal-site"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               title="Site repo on Github"
             >
               <GithubSvg width="1.7rem" fill="currentColor" />
@@ -110,7 +110,7 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
             <a
               href="mailto:yannsalmon.pro@gmail.com"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               title="Email me"
             >
               <EmailSvg width="1.7rem" fill="currentColor" />

@@ -7,10 +7,11 @@ analytics: ?
 favicon ? title of the page ?
 
 
+
 Implement dark theme (theme provider from styled comp, see course)
 https://www.youtube.com/watch?v=Fg8TV8Sq4W8&list=PLW0RabRDhwwzVNhlOgQQgw6HJzXdM1MnT&index=24
 
-Adding rss feed
+
 
 
 IMPROVEMENTS:
