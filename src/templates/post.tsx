@@ -132,10 +132,10 @@ const Post: React.FC<PageProps<DataProps>> = ({ data, location }) => {
     description: post.frontmatter.description,
   });
 
-  // dev mode
-  const postUrl = "http://localhost:8000" + post.fields.slug;
-  // prod mode
-  // const postUrl = data.site.siteMetadata.siteUrl + post.fields.slug
+  const postUrl = process.env.NODE_ENV === "development"
+    ? "http://localhost:8000" + post.fields.slug
+    : data.site.siteMetadata.siteUrl + post.fields.slug;
+
   const preparedToC = createToC(post.tableOfContents, postUrl);
   return (
     <Layout location={location}>
