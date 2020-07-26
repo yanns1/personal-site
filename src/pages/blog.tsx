@@ -15,7 +15,7 @@ import { ReactComponent as LightSvg } from "../assets/light.svg";
 // @ts-ignore
 import { ReactComponent as SearchSvg } from "../assets/search.svg";
 // helpers
-import { formatDate } from "../utils/helpers";
+import { formatDate, checkFrontmatterData } from "../utils/helpers";
 
 type PostCardsProps = {
   posts: {
@@ -87,6 +87,14 @@ type DataProps = {
 };
 
 const Blog: React.FC<PageProps<DataProps>> = ({ data, location }) => {
+  data.allMdx.edges.forEach((nodeObj) => {
+    checkFrontmatterData({
+      title: nodeObj.node.frontmatter.title,
+      date: nodeObj.node.frontmatter.date,
+      description: nodeObj.node.frontmatter.description,
+    })
+  })
+
   const [searchVal, setSearchVal] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 

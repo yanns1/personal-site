@@ -7,6 +7,8 @@ const StyledMdx = styled.div`
   --heading-vertical-margin: 2rem;
   --main-margin-bottom: 1.5rem;
 
+  word-break: break-word;
+
   /* anchor icon of headings */
   .anchor {
     opacity: 0.5;

@@ -18,7 +18,7 @@ import { ReactComponent as LightSvg } from "../assets/light.svg";
 // @ts-ignore
 import { ReactComponent as ClockSvg } from "../assets/clock.svg";
 // helpers
-import { formatDate } from "../utils/helpers";
+import { formatDate, checkFrontmatterData } from "../utils/helpers";
 
 type ToCDepth = 1 | 2 | 3 | 4 | 5 | 6;
 
@@ -29,6 +29,9 @@ type ToCProps = {
 };
 
 const ToC: React.FC<ToCProps> = ({ toc }) => {
+  if (toc.length === 0) {
+    throw new Error("You shouldn't create a table of contents because there's no heading in the post.")
+  }
   // use url as key because if there are 2 identical (or more)
   // headings, title will be the same but not the url
   // (thx to the gatsby-remark-autolink-headers plugin)
@@ -97,12 +100,12 @@ type DataProps = {
   };
   mdx: {
     body: string;
-    timeToRead: number;
-    tableOfContents: ToCData;
+    timeToRead: number | null;
+    tableOfContents: ToCData; // can be empty obj
     frontmatter: {
-      title: string;
-      date: string;
-      description: string;
+      title: string; // can be empty str
+      date: string | null;
+      description: string | null;
     };
 
     fields: {
@@ -113,6 +116,17 @@ type DataProps = {
 
 const Post: React.FC<PageProps<DataProps>> = ({ data, location }) => {
   const post = data.mdx;
+
+  // Check data
+  if (post.timeToRead === null) {
+    throw new Error("timeToRead is null, which means that there's too little content in the post.")
+  }
+  checkFrontmatterData({
+    title: post.frontmatter.title,
+    date: post.frontmatter.date,
+    description: post.frontmatter.description,
+  })
+
   // dev mode
   const postUrl = "http://localhost:8000" + post.fields.slug;
   // prod mode

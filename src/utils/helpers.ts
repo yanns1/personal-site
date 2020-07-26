@@ -29,3 +29,21 @@ export const formatDate = (dateData: string) => {
   const [day, month, year] = date.toLocaleDateString().split("/");
   return `${MONTHS[month]} ${day[0] === "0" ? day[1] : day}, ${year}`;
 };
+
+type FrontmatterData = {
+  title: string;
+  date: string | null;
+  description: string | null;
+}
+
+export const checkFrontmatterData = ({ title, date, description }: FrontmatterData): void | never => {
+  if (title === "") {
+    throw new Error("title is empty. It must have been forgotten in the post frontmatter.")
+  }
+  if (date === null) {
+    throw new Error("date is null. It must have been forgotten in the post frontmatter.")
+  }
+  if (description === null) {
+    throw new Error("description is null. It must have been forgotten in the post frontmatter.")
+  }
+}
