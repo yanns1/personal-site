@@ -26,8 +26,9 @@ export const formatDate = (dateData: string) => {
     return "The date has not been correctly processed.";
   }
 
-  const [day, month, year] = date.toLocaleDateString().split("/");
-  return `${MONTHS[month]} ${day[0] === "0" ? day[1] : day}, ${year}`;
+  const options = { year: "numeric", month: "long", day: "numeric" }
+  // "undefined" means default to navigator locale
+  return date.toLocaleDateString("en-US", options)
 };
 
 type FrontmatterData = {
