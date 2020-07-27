@@ -12,7 +12,7 @@ const StyledToC = styled.div`
   }
   ul {
     & li {
-      color: var(--primary-dark1-color);
+      color: var(--primary-dark2-color);
       list-style-type: disc;
       &:hover {
         text-decoration: underline;

@@ -63,6 +63,7 @@ const GlobalStyle = createGlobalStyle`
   font-style: normal;
 }
 
+
   *,
   *:before,
   *:after {
@@ -114,15 +115,20 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  ::selection {
+      background: var(--primary-dark2-color);
+      color: white;
+  }
+
   body {
     /* Don't use units because poor inheritance behavior */
     /* (cause problems for headers here) */
     line-height: 1.4;
     font-family: Montserrat, sans-serif;
     color: ${(props) =>
-      props.theme === "dark" ? "var(--smooth-white)" : "var(--smooth-dark)"};
+    props.theme === "dark" ? "var(--smooth-white)" : "var(--smooth-dark)"};
     background-color: ${(props) =>
-      props.theme === "dark" ? "var(--smooth-dark)" : "var(--smooth-white)"};
+    props.theme === "dark" ? "var(--smooth-dark)" : "var(--smooth-white)"};
   }
 
   a {

@@ -8,7 +8,7 @@ https://www.youtube.com/watch?v=Fg8TV8Sq4W8&list=PLW0RabRDhwwzVNhlOgQQgw6HJzXdM1
 
 Change selection color to primary color
 
-Refactor formatDate helper
+
 
 IMPROVEMENTS:
 better quality for projects photos + show them on diff tab when clicked (put them in static folder ?)
