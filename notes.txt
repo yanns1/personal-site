@@ -1,9 +1,3 @@
-TODOs
-clean package.json
-offline: https://www.gatsbyjs.org/docs/resource-handling-and-service-workers/#offline-plugin-gatsby-plugin-offline
-manifest
-analytics: ?
-favicon ? title of the page ?
 
 
 
@@ -13,7 +7,10 @@ https://www.youtube.com/watch?v=Fg8TV8Sq4W8&list=PLW0RabRDhwwzVNhlOgQQgw6HJzXdM1
 
 
 
+
 IMPROVEMENTS:
 better quality for projects photos + show them on diff tab when clicked (put them in static folder ?)
 
 Progress bar for feedback about where the reader is in the reading of the post
+
+analytics: ?
