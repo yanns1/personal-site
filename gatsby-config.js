@@ -120,19 +120,19 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `Gatsby Starter Blog`,
-    //     short_name: `GatsbyJS`,
-    //     start_url: `/`,
-    //     background_color: `#ffffff`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `content/assets/gatsby-icon.png`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Yann Salmon`,
+        short_name: `ys`,
+        start_url: `/`,
+        background_color: `#F2F2F2`,
+        theme_color: `rgba(37, 193, 175, 0.59)`,
+        display: `minimal-ui`,
+        icon: `src/assets/big-avatar.png`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 };
