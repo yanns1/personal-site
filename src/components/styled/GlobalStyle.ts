@@ -116,8 +116,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-      background: var(--primary-dark2-color);
-      color: white;
+      background: ${(props) =>
+        props.theme === "dark"
+          ? "var(--primary-light-color)"
+          : "var(--primary-dark2-color)"};
+      color: var(--smooth-white);
   }
 
   body {
@@ -126,9 +129,9 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.4;
     font-family: Montserrat, sans-serif;
     color: ${(props) =>
-    props.theme === "dark" ? "var(--smooth-white)" : "var(--smooth-dark)"};
+      props.theme === "dark" ? "var(--smooth-white)" : "var(--smooth-dark)"};
     background-color: ${(props) =>
-    props.theme === "dark" ? "var(--smooth-dark)" : "var(--smooth-white)"};
+      props.theme === "dark" ? "var(--smooth-dark)" : "var(--smooth-white)"};
   }
 
   a {

@@ -1,15 +1,16 @@
 import React from "react";
 import { graphql, PageProps, Link } from "gatsby";
 // components
-import Layout from "../components/shared/layout";
-import SEO from "../components/shared/seo";
+import Layout from "../components/shared/Layout";
+import SEO from "../components/shared/SEO";
 import StyledHome from "../components/styled/StyledHome";
+import Newsletter from "../components/shared/Newsletter";
+import PageHeader from "../components/shared/PageHeader";
 // svgs
 // @ts-ignore
 import { ReactComponent as MoonSvg } from "../assets/moon.svg";
 // @ts-ignore
 import { ReactComponent as LightSvg } from "../assets/light.svg";
-import Newsletter from "../components/shared/newsletter";
 
 const Home: React.FC<PageProps> = ({ location }) => {
   return (
@@ -19,11 +20,7 @@ const Home: React.FC<PageProps> = ({ location }) => {
         description="Homepage of the site where I present myself"
       />
       <StyledHome>
-        <div className="header">
-          <h1>Hey, I'm Yann Salmon</h1>
-          <MoonSvg width="2rem" fill="currentColor" title="Moon icon" />
-          {/* <LightSvg fill="currentColor" title="Light icon"/> */}
-        </div>
+        <PageHeader title={"Hey, I'm Yann Salmon"} />
         <p>
           I’m a french developer living in Nantes and a student in engineering
           (not yet specialized into IT but that’s the plan !).

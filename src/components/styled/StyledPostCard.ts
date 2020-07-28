@@ -9,12 +9,15 @@ const StyledPostCard = styled(Link)`
   h2 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--primary-dark2-color);
+    color: ${(props) =>
+      props.theme === "dark"
+        ? "var(--primary-light-color)"
+        : "var(--primary-dark2-color)"};
   }
 
   .date {
     font-size: 0.75rem;
-    color: #4f4f4f;
+    color: #828282;
     margin-bottom: var(--vertical-space);
     margin-bottom: var(--vertical-space);
   }
@@ -23,19 +26,21 @@ const StyledPostCard = styled(Link)`
     margin-bottom: var(--vertical-space);
   }
 
+  /* To keep in sync with StyledTags */
   .tag {
     display: inline-block;
     font-size: 0.75rem;
-    color: var(--primary-dark2-color);
+    color: ${(props) =>
+      props.theme === "dark"
+        ? "var(--primary-light-color)"
+        : "var(--primary-dark2-color)"};
     padding: 0.25rem;
     border-radius: var(--border-radius);
-    box-shadow: 0 0 0 1px var(--primary-dark2-color);
-    /* transition: var(--transition-all);
-  &:hover {
-    color: var(--smooth-white);
-    box-shadow: none;
-    background-color: var(--primary-dark2-color);
-  } */
+    box-shadow: 0 0 0 1px
+      ${(props) =>
+        props.theme === "dark"
+          ? "var(--primary-light-color)"
+          : "var(--primary-dark2-color)"};
   }
 `;
 

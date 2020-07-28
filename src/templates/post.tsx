@@ -5,12 +5,15 @@ import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import mdxComponents from "../components/mdx/mdxComponents";
 // components
-import Layout from "../components/shared/layout";
-import SEO from "../components/shared/seo";
-import Newsletter from "../components/shared/newsletter";
+import Layout from "../components/shared/Layout";
+import SEO from "../components/shared/SEO";
+import Newsletter from "../components/shared/Newsletter";
 import StyledPost from "../components/styled/StyledPost";
 import StyledToC from "../components/styled/StyledToC";
 import CenteredImg from "../components/mdx/CenteredImg";
+import PageHeader from "../components/shared/PageHeader";
+// contexts
+import { useTheme } from "../components/contexts/ThemeContext";
 // svgs
 // @ts-ignore
 import { ReactComponent as MoonSvg } from "../assets/moon.svg";
@@ -35,6 +38,9 @@ const ToC: React.FC<ToCProps> = ({ toc }) => {
       "You shouldn't create a table of contents because there's no heading in the post."
     );
   }
+
+  const theme = useTheme();
+
   // use url as key because if there are 2 identical (or more)
   // headings, title will be the same but not the url
   // (thx to the gatsby-remark-autolink-headers plugin)
@@ -44,7 +50,7 @@ const ToC: React.FC<ToCProps> = ({ toc }) => {
     </li>
   ));
   return (
-    <StyledToC>
+    <StyledToC theme={theme}>
       <h2>Table of Contents</h2>
       <ul>{listItems}</ul>
     </StyledToC>
@@ -132,9 +138,10 @@ const Post: React.FC<PageProps<DataProps>> = ({ data, location }) => {
     description: post.frontmatter.description,
   });
 
-  const postUrl = process.env.NODE_ENV === "development"
-    ? "http://localhost:8000" + post.fields.slug
-    : data.site.siteMetadata.siteUrl + post.fields.slug;
+  const postUrl =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:8000" + post.fields.slug
+      : data.site.siteMetadata.siteUrl + post.fields.slug;
 
   const preparedToC = createToC(post.tableOfContents, postUrl);
   return (
@@ -144,11 +151,7 @@ const Post: React.FC<PageProps<DataProps>> = ({ data, location }) => {
         description={post.frontmatter.description}
       />
       <StyledPost>
-        <div className="header">
-          <h1>{post.frontmatter.title}</h1>
-          <MoonSvg width="2rem" fill="currentColor" title="Moon icon" />
-          {/* <LightSvg fill="currentColor" title="Light icon"/> */}
-        </div>
+        <PageHeader title={post.frontmatter.title} />
         <div className="post-info">
           <span className="date">{formatDate(post.frontmatter.date)}</span>
           <span> - </span>

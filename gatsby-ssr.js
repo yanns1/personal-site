@@ -1,7 +1,3 @@
-// fonts
-import "typeface-montserrat";
-import "typeface-merriweather";
-// components
 import React from "react";
 import { ThemeProvider } from "./src/components/contexts/ThemeContext";
 

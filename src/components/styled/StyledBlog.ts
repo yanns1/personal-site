@@ -23,7 +23,11 @@ const StyledBlog = styled(StyledContentHeader)`
     align-items: center;
     border-radius: var(--border-radius);
     color: #828282;
-    box-shadow: 0 0 0 1px var(--primary-light-color);
+    box-shadow: 0 0 0 1px
+      ${(props) =>
+        props.theme === "dark"
+          ? "var(--primary-dark2-color)"
+          : "var(--primary-light-color)"};
     min-width: min-content;
     width: 50%;
     transition: var(--transition-all);
@@ -38,11 +42,23 @@ const StyledBlog = styled(StyledContentHeader)`
       padding: 0.3rem;
     }
     &:hover {
-      box-shadow: 0 0 0 1px var(--primary-dark2-color);
+      box-shadow: 0 0 0 1px
+        ${(props) =>
+          props.theme === "dark"
+            ? "var(--primary-light-color)"
+            : "var(--primary-dark2-color)"};
     }
     &--filled {
-      box-shadow: 0 0 0 1px var(--primary-dark2-color);
-      color: var(--smooth-dark);
+      box-shadow: 0 0 0 1px
+        ${(props) =>
+          props.theme === "dark"
+            ? "var(--primary-light-color)"
+            : "var(--primary-dark2-color)"};
+      color: ${(props) =>
+        props.theme === "dark" ? "var(--smooth-white)" : "var(--smooth-dark)"};
+    }
+    & input {
+      color: inherit;
     }
   }
 

@@ -2,10 +2,11 @@ import React from "react";
 import { graphql, useStaticQuery, PageProps, Link } from "gatsby";
 // components
 import Img, { FluidObject } from "gatsby-image";
-import Layout from "../components/shared/layout";
-import SEO from "../components/shared/seo";
+import Layout from "../components/shared/Layout";
+import SEO from "../components/shared/SEO";
 import StyledProject from "../components/styled/StyledProject";
 import StyledPortfolio from "../components/styled/StyledPortfolio";
+import PageHeader from "../components/shared/PageHeader";
 // svgs
 // @ts-ignore
 import { ReactComponent as MoonSvg } from "../assets/moon.svg";
@@ -88,11 +89,7 @@ const Portfolio: React.FC<PageProps<DataProps>> = ({ data, location }) => {
     <Layout location={location}>
       <SEO title="Portfolio" description="List of the projects I've done" />
       <StyledPortfolio>
-        <div className="header">
-          <h1>Portfolio</h1>
-          <MoonSvg width="2rem" fill="currentColor" title="Moon icon" />
-          {/* <LightSvg fill="currentColor" title="Light icon"/> */}
-        </div>
+        <PageHeader title={"Portfolio"} />
         <p>
           I currently have no professional experience but I've built several
           apps that I use on a daily basis.

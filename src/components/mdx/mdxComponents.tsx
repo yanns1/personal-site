@@ -11,6 +11,9 @@ const StyledMdx = styled.div`
 
   /* anchor icon of headings */
   .anchor {
+    /* will be passed to svg inside a tag */
+    /* doesn't work with color */
+    fill: currentColor;
     opacity: 0.5;
     padding-right: 0.5rem;
     font-size: 1rem;

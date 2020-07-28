@@ -1,12 +1,15 @@
 import React, { useState, useMemo } from "react";
 import { PageProps, graphql } from "gatsby";
 // components
-import Layout from "../components/shared/layout";
-import SEO from "../components/shared/seo";
-import Newsletter from "../components/shared/newsletter";
+import Layout from "../components/shared/Layout";
+import SEO from "../components/shared/SEO";
+import Newsletter from "../components/shared/Newsletter";
 import StyledBlog from "../components/styled/StyledBlog";
 import StyledPostCard from "../components/styled/StyledPostCard";
 import StyledTags from "../components/styled/StyledTags";
+import PageHeader from "../components/shared/PageHeader";
+// contexts
+import { useTheme } from "../components/contexts/ThemeContext";
 // svgs
 // @ts-ignore
 import { ReactComponent as MoonSvg } from "../assets/moon.svg";
@@ -28,9 +31,11 @@ type PostCardsProps = {
 };
 
 const PostCards: React.FC<PostCardsProps> = ({ posts }) => {
+  const theme = useTheme();
+
   const postCardsJsx = posts.map((post) => {
     return (
-      <StyledPostCard key={post.title} to={post.slug}>
+      <StyledPostCard theme={theme} key={post.title} to={post.slug}>
         <h2>{post.title}</h2>
         <div className="date">{formatDate(post.date)}</div>
         <p className="description">{post.description}</p>
@@ -49,18 +54,22 @@ type TagsProps = {
 };
 
 const Tags: React.FC<TagsProps> = ({ tags, selectedTags, onTagClick }) => {
-  const tagsJsx = tags.map((tag) => (
-    <div
-      key={tag}
-      className={selectedTags.includes(tag) ? "tag tag--selected" : "tag"}
-      onClick={onTagClick}
-      data-tag={tag}
-    >
-      {tag}
-    </div>
-  ));
+  const theme = useTheme();
 
-  return <StyledTags>{tagsJsx}</StyledTags>;
+  const tagsJsx = tags.map((tag) => {
+    return (
+      <div
+        key={tag}
+        className={selectedTags.includes(tag) ? "tag tag--selected" : "tag"}
+        onClick={onTagClick}
+        data-tag={tag}
+      >
+        {tag}
+      </div>
+    );
+  });
+
+  return <StyledTags theme={theme}>{tagsJsx}</StyledTags>;
 };
 
 type DataProps = {
@@ -141,15 +150,13 @@ const Blog: React.FC<PageProps<DataProps>> = ({ data, location }) => {
     return uniquifiedTags;
   }, [data]);
 
+  const theme = useTheme();
+
   return (
     <Layout location={location}>
       <SEO title="Blog" description="List of all blog posts" />
-      <StyledBlog>
-        <div className="header">
-          <h1>Blog</h1>
-          <MoonSvg width="2rem" fill="currentColor" title="Moon icon" />
-          {/* <LightSvg fill="currentColor" title="Light icon"/> */}
-        </div>
+      <StyledBlog theme={theme}>
+        <PageHeader title={"Blog"} />
         <p className="blog-intro">
           I write about Javascript and React mainly but I also write about
           programming in general and “life” things that goes through my head.

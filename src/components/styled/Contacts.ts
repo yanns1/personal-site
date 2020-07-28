@@ -6,15 +6,16 @@ const Contacts = styled.div`
   column-gap: 1rem;
 
   a {
+    color: ${(props) => (props.theme === "dark" ? "#BDBDBD" : "inherited")};
     &:hover {
       /* svgs inherit that color */
-      color: black;
+      color: ${(props) => (props.theme === "dark" ? "white" : "black")};
     }
 
     &:focus {
       outline: none;
       /* svgs inherit that color */
-      color: black;
+      color: ${(props) => (props.theme === "dark" ? "white" : "black")};
     }
   }
 `;

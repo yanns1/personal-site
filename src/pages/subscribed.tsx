@@ -1,9 +1,10 @@
 import React from "react";
 import { PageProps } from "gatsby";
 // components
-import Layout from "../components/shared/layout";
-import SEO from "../components/shared/seo";
+import Layout from "../components/shared/Layout";
+import SEO from "../components/shared/SEO";
 import StyledSubscribed from "../components/styled/StyledSubscribed";
+import PageHeader from "../components/shared/PageHeader";
 
 const Portfolio: React.FC<PageProps> = ({ location }) => {
   return (
@@ -13,7 +14,7 @@ const Portfolio: React.FC<PageProps> = ({ location }) => {
         description="Confirm subscription to the newsletter"
       />
       <StyledSubscribed>
-        <h1>Confirmed subscription !</h1>
+        <PageHeader title={"Confirmed subscription !"} />
         <p>Again, thank you for joining the newsletter.</p>
         <p>You can expect to receive emails when a new post is published.</p>
         <p>

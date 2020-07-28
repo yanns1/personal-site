@@ -1,9 +1,10 @@
 import React from "react";
-import { graphql, PageProps, Link } from "gatsby";
+import { PageProps } from "gatsby";
 
-import Layout from "../components/shared/layout";
-import SEO from "../components/shared/seo";
+import Layout from "../components/shared/Layout";
+import SEO from "../components/shared/SEO";
 import StyledMore from "../components/styled/StyledMore";
+import PageHeader from "../components/shared/PageHeader";
 // svgs
 // @ts-ignore
 import { ReactComponent as MoonSvg } from "../assets/moon.svg";
@@ -15,11 +16,7 @@ const More: React.FC<PageProps> = ({ location }) => {
     <Layout location={location}>
       <SEO title="More" description="More things about me and what I do" />
       <StyledMore>
-        <div className="header">
-          <h1>More</h1>
-          <MoonSvg width="2rem" fill="currentColor" title="Moon icon" />
-          {/* <LightSvg fill="currentColor" title="Light icon"/> */}
-        </div>
+        <PageHeader title={"More"} />
         <h2>What I'm up to</h2>
         <p>
           This summer, I dedicate myself to freelance work. (by the way, if I

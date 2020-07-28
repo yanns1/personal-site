@@ -533,9 +533,7 @@
         "type": "debugdata",
         "items": [
           {
-            "failures": [
-              "Manifest does not have `theme_color`"
-            ],
+            "failures": ["Manifest does not have `theme_color`"],
             "isParseFailure": false,
             "hasStartUrl": true,
             "hasIconsAtLeast144px": true,
@@ -2282,11 +2280,7 @@
         "debugData": {
           "type": "debugdata",
           "impact": "serious",
-          "tags": [
-            "cat.color",
-            "wcag2aa",
-            "wcag143"
-          ]
+          "tags": ["cat.color", "wcag2aa", "wcag143"]
         }
       }
     },
@@ -6157,9 +6151,7 @@
       "lighthouse-core/audits/works-offline.js | description": [
         "audits[works-offline].description"
       ],
-      "lighthouse-core/audits/viewport.js | title": [
-        "audits.viewport.title"
-      ],
+      "lighthouse-core/audits/viewport.js | title": ["audits.viewport.title"],
       "lighthouse-core/audits/viewport.js | description": [
         "audits.viewport.description"
       ],
@@ -6357,9 +6349,7 @@
           "path": "audits[critical-request-chains].displayValue"
         }
       ],
-      "lighthouse-core/audits/redirects.js | title": [
-        "audits.redirects.title"
-      ],
+      "lighthouse-core/audits/redirects.js | title": ["audits.redirects.title"],
       "lighthouse-core/audits/redirects.js | description": [
         "audits.redirects.description"
       ],
@@ -7200,9 +7190,7 @@
       "lighthouse-core/audits/seo/hreflang.js | description": [
         "audits.hreflang.description"
       ],
-      "lighthouse-core/audits/seo/plugins.js | title": [
-        "audits.plugins.title"
-      ],
+      "lighthouse-core/audits/seo/plugins.js | title": ["audits.plugins.title"],
       "lighthouse-core/audits/seo/plugins.js | description": [
         "audits.plugins.description"
       ],

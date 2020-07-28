@@ -2,10 +2,11 @@ import React from "react";
 // components
 import Avatar from "gatsby-image";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import GlobalStyle from "../styled/GlobalStyle";
 import StyledLayout from "../styled/StyledLayout";
 import StyledNav from "../styled/StyledNav";
 import Contacts from "../styled/Contacts";
+import GlobalStyle from "../styled/GlobalStyle";
+import { useTheme } from "../contexts/ThemeContext";
 // svgs
 // @ts-ignore
 import { ReactComponent as UpworkSvg } from "../../assets/upwork.svg";
@@ -61,67 +62,69 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
       }
     }
   `);
+
+  const theme = useTheme();
+
   return (
-    <>
-      <GlobalStyle></GlobalStyle>
-      <StyledLayout>
-        <header>
-          <Link to="/" className="avatar" activeClassName="active">
-            <Avatar
-              fluid={data.file.childImageSharp.fluid}
-              alt={"Yann Salmon"}
-              style={{
-                width: "3rem",
-                background: "#C4C4C4",
-                borderRadius: "50%",
-              }}
-            />
+    <StyledLayout>
+      <GlobalStyle theme={theme} />
+      <header>
+        <Link to="/" className="avatar" activeClassName="active">
+          <Avatar
+            fluid={data.file.childImageSharp.fluid}
+            alt={"Yann Salmon"}
+            style={{
+              width: "3rem",
+              background: "#C4C4C4",
+              borderRadius: "50%",
+            }}
+          />
+        </Link>
+        <Nav navlinks={navlinks} />
+      </header>
+      <main>{children}</main>
+      <footer>
+        <Contacts theme={theme}>
+          {/* Where to find my Upwork link ? */}
+          {/* Find link in: Find work => Profile => Profile link on the right */}
+          <a
+            href="https://www.upwork.com/o/profiles/users/~01a97d9c6d2047e133/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Upwork"
+          >
+            <UpworkSvg width="1.7rem" fill="currentColor" />
+          </a>
+          <a
+            href="https://twitter.com/YannSalmon1"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="My Twitter account"
+          >
+            <TwitterSvg width="1.7rem" fill="currentColor" />
+          </a>
+          <a
+            href="https://github.com/yanns1/personal-site"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Site repo on Github"
+          >
+            <GithubSvg width="1.7rem" fill="currentColor" />
+          </a>
+          <a
+            href="mailto:yannsalmon.pro@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Email me"
+          >
+            <EmailSvg width="1.7rem" fill="currentColor" />
+          </a>
+          <Link to="/rss.xml" title="RSS Feed">
+            <RssSvg width="1.7rem" fill="currentColor" />
           </Link>
-          <Nav navlinks={navlinks} />
-        </header>
-        <main>{children}</main>
-        <footer>
-          <Contacts>
-            {/* Find link in: Find work => Profile => Profile link on the right */}
-            <a
-              href="https://www.upwork.com/o/profiles/users/~01a97d9c6d2047e133/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Upwork"
-            >
-              <UpworkSvg width="1.7rem" fill="currentColor" />
-            </a>
-            <a
-              href="https://twitter.com/YannSalmon1"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="My Twitter account"
-            >
-              <TwitterSvg width="1.7rem" fill="currentColor" />
-            </a>
-            <a
-              href="https://github.com/yanns1/personal-site"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Site repo on Github"
-            >
-              <GithubSvg width="1.7rem" fill="currentColor" />
-            </a>
-            <a
-              href="mailto:yannsalmon.pro@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Email me"
-            >
-              <EmailSvg width="1.7rem" fill="currentColor" />
-            </a>
-            <Link to="/rss.xml" title="RSS Feed">
-              <RssSvg width="1.7rem" fill="currentColor" />
-            </Link>
-          </Contacts>
-        </footer>
-      </StyledLayout>
-    </>
+        </Contacts>
+      </footer>
+    </StyledLayout>
   );
 };
 

@@ -12,7 +12,10 @@ const StyledToC = styled.div`
   }
   ul {
     & li {
-      color: var(--primary-dark2-color);
+      color: ${(props) =>
+        props.theme === "dark"
+          ? "var(--primary-light-color)"
+          : "var(--primary-dark2-color)"};
       list-style-type: disc;
       &:hover {
         text-decoration: underline;
