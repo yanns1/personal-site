@@ -76,22 +76,36 @@ type ToCData = {
   items: Item[];
 };
 
+/**
+ * TODO: Better version for createToC
+ * returned headings are in ascending order of depth
+ * but sometimes we may have a heading 1 after a heading 2 for example.
+ * Problem is, the hierarchy will not be maintained.
+ * So need to find another way to recurse.
+ */
 const createToC = (
   tocData: ToCData | Item,
   postUrl: string,
   newToc: Heading[] = [],
   currDepth: ToCDepth = 1
 ): Heading[] => {
-  const currHeadings = tocData.items;
+  const currHeadings = tocData?.items;
   if (currHeadings && currDepth < 7) {
-    const newHeadings = currHeadings.map((heading) => ({
-      url: postUrl + heading.url,
-      title: heading.title,
-      depth: currDepth,
-    }));
+    const newHeadings = currHeadings.reduce((acc: Heading[], item) => {
+      const newHeading = {
+        url: postUrl + item.url,
+        title: item.title,
+        depth: currDepth,
+      }
+      return item.items ? [...acc, null] : [...acc, newHeading];
+    }, []).filter((newHeading) => newHeading !== null);
+
     const updatedToc = [...newToc, ...newHeadings];
+
+    const nextDepthItem = currHeadings.find((heading) => heading.items)
+
     return createToC(
-      currHeadings[currHeadings.length - 1],
+      nextDepthItem,
       postUrl,
       updatedToc,
       (currDepth + 1) as ToCDepth
@@ -144,6 +158,7 @@ const Post: React.FC<PageProps<DataProps>> = ({ data, location }) => {
       : data.site.siteMetadata.siteUrl + post.fields.slug;
 
   const preparedToC = createToC(post.tableOfContents, postUrl);
+
   return (
     <Layout location={location}>
       <SEO
