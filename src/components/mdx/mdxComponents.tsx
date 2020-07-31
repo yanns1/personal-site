@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import Code from "./Code";
 
@@ -139,14 +140,26 @@ const BlockQuote = styled.blockquote`
   }
 `;
 
-const A: React.FC = (props) => (
-  <a
-    className="self-made-link"
-    target="_blank"
-    rel="noopener noreferrer"
-    {...props}
-  ></a>
-);
+type AProps = {
+  children?: React.ReactNode[];
+  className?: string;
+  href?: string;
+};
+
+const A: React.FC<AProps> = (props) => {
+  if (props.className?.includes("anchor")) {
+    return <Link to={props.href} {...props} />;
+  } else {
+    return (
+      <a
+        className="self-made-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        {...props}
+      ></a>
+    );
+  }
+};
 
 const InlineCode = styled.code`
   font-style: italic;

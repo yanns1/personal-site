@@ -91,18 +91,20 @@ const createToC = (
 ): Heading[] => {
   const currHeadings = tocData?.items;
   if (currHeadings && currDepth < 7) {
-    const newHeadings = currHeadings.reduce((acc: Heading[], item) => {
-      const newHeading = {
-        url: postUrl + item.url,
-        title: item.title,
-        depth: currDepth,
-      }
-      return item.items ? [...acc, null] : [...acc, newHeading];
-    }, []).filter((newHeading) => newHeading !== null);
+    const newHeadings = currHeadings
+      .reduce((acc: Heading[], item) => {
+        const newHeading = {
+          url: postUrl + item.url,
+          title: item.title,
+          depth: currDepth,
+        };
+        return item.items ? [...acc, null] : [...acc, newHeading];
+      }, [])
+      .filter((newHeading) => newHeading !== null);
 
     const updatedToc = [...newToc, ...newHeadings];
 
-    const nextDepthItem = currHeadings.find((heading) => heading.items)
+    const nextDepthItem = currHeadings.find((heading) => heading.items);
 
     return createToC(
       nextDepthItem,

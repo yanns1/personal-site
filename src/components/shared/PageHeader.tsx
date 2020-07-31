@@ -28,13 +28,13 @@ const PageHeader: React.FC<Props> = ({ title }) => {
           title="Moon icon"
         />
       ) : (
-          <LightSvg
-            onClick={() => setTheme("light")}
-            width="2rem"
-            fill="currentColor"
-            title="Light icon"
-          />
-        )}
+        <LightSvg
+          onClick={() => setTheme("light")}
+          width="2rem"
+          fill="currentColor"
+          title="Light icon"
+        />
+      )}
     </StyledPageHeader>
   );
 };
