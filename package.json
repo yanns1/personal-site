@@ -39,11 +39,12 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.8",
     "@types/styled-components": "^5.1.1",
-    "babel-jest": "^26.1.0",
-    "babel-preset-gatsby": "^0.5.2",
+    "babel-jest": "^26.2.2",
+    "babel-preset-gatsby": "^0.5.4",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.1.0",
+    "jest": "^26.2.2",
     "prettier": "2.0.5",
     "react-test-renderer": "^16.13.1"
   },
@@ -55,13 +56,12 @@
     "url": "git+https://github.com/yanns1/personal-site"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write",
-    "formatAll": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "jest"
+    "b": "gatsby build",
+    "d": "gatsby develop",
+    "f": "prettier --write",
+    "fa": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "s": "gatsby serve",
+    "c": "gatsby clean",
+    "t": "jest"
   }
 }

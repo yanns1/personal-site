@@ -29,7 +29,7 @@ type ToCDepth = 1 | 2 | 3 | 4 | 5 | 6;
 type Heading = { url: string; title: string; depth: ToCDepth };
 
 type ToCProps = {
-  toc: Array<Heading | undefined>;
+  toc: Heading[];
 };
 
 const ToC: React.FC<ToCProps> = ({ toc }) => {
@@ -66,55 +66,61 @@ const shortcodes = { ToC, CenteredImg };
 // perf issues
 const allMdxComp = { ...mdxComponents, ...shortcodes };
 
-type Item = {
-  url: string;
-  title: string;
+export type Item = {
+  url?: string;
+  title?: string;
   items?: Item[];
 };
 
-type ToCData = {
+export type ToCData = {
   items: Item[];
 };
 
-/**
- * TODO: Better version for createToC
- * returned headings are in ascending order of depth
- * but sometimes we may have a heading 1 after a heading 2 for example.
- * Problem is, the hierarchy will not be maintained.
- * So need to find another way to recurse.
- */
-const createToC = (
+export const createToC = (
   tocData: ToCData | Item,
   postUrl: string,
-  newToc: Heading[] = [],
   currDepth: ToCDepth = 1
 ): Heading[] => {
-  const currHeadings = tocData?.items;
-  if (currHeadings && currDepth < 7) {
-    const newHeadings = currHeadings
-      .reduce((acc: Heading[], item) => {
-        const newHeading = {
-          url: postUrl + item.url,
-          title: item.title,
-          depth: currDepth,
-        };
-        return item.items ? [...acc, null] : [...acc, newHeading];
+  return tocData?.items
+    ? tocData.items.reduce((acc, heading) => {
+        if (currDepth < 7) {
+          const newHeading: Heading | null =
+            heading.url && heading.title
+              ? {
+                  url: postUrl + heading.url,
+                  title: heading.title,
+                  depth: currDepth,
+                }
+              : null;
+
+          if (heading.items) {
+            return newHeading
+              ? [
+                  ...acc,
+                  newHeading,
+                  ...createToC(heading, postUrl, (currDepth + 1) as ToCDepth),
+                ]
+              : [
+                  ...acc,
+                  ...createToC(heading, postUrl, (currDepth + 1) as ToCDepth),
+                ];
+          } else {
+            return newHeading
+              ? [
+                  ...acc,
+                  {
+                    url: postUrl + heading.url,
+                    title: heading.title,
+                    depth: currDepth,
+                  },
+                ]
+              : acc;
+          }
+        } else {
+          return acc;
+        }
       }, [])
-      .filter((newHeading) => newHeading !== null);
-
-    const updatedToc = [...newToc, ...newHeadings];
-
-    const nextDepthItem = currHeadings.find((heading) => heading.items);
-
-    return createToC(
-      nextDepthItem,
-      postUrl,
-      updatedToc,
-      (currDepth + 1) as ToCDepth
-    );
-  } else {
-    return newToc;
-  }
+    : [];
 };
 
 type DataProps = {
