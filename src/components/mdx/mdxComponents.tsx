@@ -148,6 +148,7 @@ type AProps = {
 
 const A: React.FC<AProps> = (props) => {
   if (props.className?.includes("anchor")) {
+    // for headings
     return <Link to={props.href} {...props} />;
   } else {
     return (

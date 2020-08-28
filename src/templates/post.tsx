@@ -5,6 +5,7 @@ import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import mdxComponents from "../components/mdx/mdxComponents";
 // components
+import styled from "styled-components";
 import Layout from "../components/shared/Layout";
 import SEO from "../components/shared/SEO";
 import Newsletter from "../components/shared/Newsletter";
@@ -57,8 +58,17 @@ const ToC: React.FC<ToCProps> = ({ toc }) => {
   );
 };
 
+const InnerLink = styled(Link)`
+  /* Same as "self-made-link" class in GlobalStyles.ts, but merely adding the class to Link doesn't work. */
+  color: #2f80ed;
+  transition: var(--transition-all);
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 // All these components will be globally available in each .mdx file
-const shortcodes = { ToC, CenteredImg };
+const shortcodes = { ToC, CenteredImg, InnerLink };
 
 // keep it outside of the component because making
 // the obj inline in the jsx will cause a rerender each time
