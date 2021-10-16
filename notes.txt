@@ -1,4 +1,9 @@
+Git and Netlify workflow for the site:
+- git doc: https://git-scm.com/book/en/v2
 
+- When making a change in local repo., run "git add ." to stage all modified files from the current directory (thus the "."). Files staged are files that will be commited when running the next "git commit". To name a commit, use instead "git commit -m" (or alias "git cim"). All this workflow happens in a branch (here "master"). The final step is to push that local branch to the remote branch on Github which is named "origin": so run "git push -u origin master".
+
+- How to delete from local then push it to remote/ How to delete file only in remote/etc.:https://stackoverflow.com/questions/9701238/git-how-delete-file-from-remote-repository
 
 
 IMPROVEMENTS:
@@ -11,4 +16,4 @@ analytics: ?
 pagination ?
 https://www.youtube.com/watch?v=HtFieG12KPk&list=PLW0RabRDhwwzVNhlOgQQgw6HJzXdM1MnT&index=19
 
-README
+
